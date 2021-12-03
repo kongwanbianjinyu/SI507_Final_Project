@@ -5,7 +5,7 @@ by population or by the distance from Ann Arbor.
 
 ## Requisite Packages
 
-This project requires requests, beautifulsoup4, flask, plotly (please use requirements.txt for installation)
+This project requires requests, tabulate, pandas, sqlite3, urllib, flask, plotly (please use requirements.txt for installation)
 
 ```
 pip install -r requirements.txt
