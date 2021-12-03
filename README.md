@@ -1,6 +1,7 @@
 # SI507_Final_Project
 
-This is my final project for SI 507 at University of Michigan.
+This is my final project for SI 507 at University of Michigan. This project can search the top 5 cities in population in the selected country and get real-time Twitter related to the cities. The user would select a country they are interested in and choose the sort types. Then you would get a table containing the information about the cities, including WikiData Id, Latitude, Longitude, Population, and Distance from Ann Arbor. You can choose to sort the table
+by population or by the distance from Ann Arbor.
 
 ## Requisite Packages
 
