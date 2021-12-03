@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block add_styles %}
+    table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    .twitter_table_center{
+        margin-left:50px;
+    margin-right:50px;
+    }
+
+}
+
+{% endblock %}
+
+{% block main %}
+    <div class="welcome">
+      <h1>Twitter for {{nm}}</h1>
+  </div>
+
+<div class="welcome">
+    <div class = "twitter_table_center">
+    <table>
+        <tr>
+            <td><b>City name</b></td>
+            <td><b>Tweets related </b></td>
+        </tr>
+        {% for tweet in twitter_list %}
+            <tr>
+                <td>{{tweet[0]}}</td>
+                <td>{{tweet[1]}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+        </div>
+</div>
+{% endblock %}

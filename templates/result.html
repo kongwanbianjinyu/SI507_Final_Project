@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block add_styles %}
+
+    table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+
+        }
+    .table_center{
+        margin-left:200px;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .strings {
+        white-space: pre-wrap;
+    }
+{% endblock %}
+
+
+
+{% block main %}
+    <div class="welcome">
+    <h1>Here is the result.Thank you!</h1>
+    </div>
+
+<div class="welcome">
+      <div class="description">
+    <h2>The cities in {{country_id}} are the following.</h2>
+      </div>
+    </div>
+
+<div class="welcome">
+    <div class = "table_center">
+    <table>
+        <tr>
+            <td><b> Wikidata id </b></td>
+            <td><b> Name</b></td>
+            <td><b> Latitude</b></td>
+            <td><b> Longtitude</b></td>
+            <td><b> Population</b></td>
+            <td><b> Distance From Ann Arbor</b></td>
+        </tr>
+        {% for city in city_list %}
+            <tr>
+                <td>{{city[0]}}</td>
+                <td><a href="{{ url_for('show_twitter', nm=city[1]) }}">{{city[1]}}</a></td>
+                <td>{{city[2]}}</td>
+                <td>{{city[3]}}</td>
+                <td>{{city[4]}}</td>
+                <td>{{city[5]}} km</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+        </div>
+    </div>
+
+<div class="welcome">
+    <h4>Here is the tree:</h4>
+    <div class="welcome">
+    <div class = "strings">
+            <h5>{{tree_string}}</h5>
+    </div>
+        </div>
+</div>
+
+<div class="welcome">
+
+    <h4>Traversal Tree Result:</h4>
+    <div class = "table_center">
+    <table>
+        <tr>
+            <td><b> {{traver_result[0]}} </b></td>
+            <td><b> {{traver_result[1]}}</b></td>
+            <td><b> {{traver_result[2]}}</b></td>
+            <td><b> {{traver_result[3]}}</b></td>
+            <td><b> {{traver_result[4]}}</b></td>
+        </tr>
+    </table>
+    </div>
+</div>
+
+
+
+<div class="welcome">
+    <div class="row">
+  <div class="column">
+      <h4>Population</h4>
+      {{plot_div_population|safe}}</div>
+  <div class="column">
+      <h4>Distance from Ann Arbor</h4>
+      {{plot_div_distance|safe}}</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+{% endblock %}
