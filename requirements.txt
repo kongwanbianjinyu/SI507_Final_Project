@@ -1,0 +1,6 @@
+tabulate
+pandas
+sqlite3
+urllib
+flask
+plotly
