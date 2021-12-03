@@ -4,3 +4,4 @@ sqlite3
 urllib
 flask
 plotly
+requests
